@@ -3,7 +3,7 @@ version: '3.5'
 services:
 
   service-app1:
-    image: nexus.keanthaicloud.com:8888/cake_shop:1.1.1
+    image: nexus.keanthaicloud.com:8888/app2:latest
     ports:
       - 6001:80
     deploy:
@@ -16,44 +16,44 @@ services:
       restart_policy:
         condition: on-failure
 
-  service-app2:
-    image: nexus.keanthaicloud.com:8888/creative_studio:4.4.4
-    ports:
-      - 6002:80
-    deploy:
-      mode: replicated
-      replicas: 1
-      update_config: 
-        parallelism: 1
-        order: start-first
-        failure_action: rollback
-      restart_policy:
-        condition: on-failure
+  # service-app2:
+  #   image: nexus.keanthaicloud.com:8888/creative_studio:4.4.4
+  #   ports:
+  #     - 6002:80
+  #   deploy:
+  #     mode: replicated
+  #     replicas: 1
+  #     update_config: 
+  #       parallelism: 1
+  #       order: start-first
+  #       failure_action: rollback
+  #     restart_policy:
+  #       condition: on-failure
 
-  service-app3:
-    image: nexus.keanthaicloud.com:8888/covido:3.3.3
-    ports:
-      - 6003:80
-    deploy:
-      mode: replicated
-      replicas: 2
-      update_config: 
-        parallelism: 1
-        order: start-first
-        failure_action: rollback
-      restart_policy:
-        condition: on-failure
+  # service-app3:
+  #   image: nexus.keanthaicloud.com:8888/covido:3.3.3
+  #   ports:
+  #     - 6003:80
+  #   deploy:
+  #     mode: replicated
+  #     replicas: 2
+  #     update_config: 
+  #       parallelism: 1
+  #       order: start-first
+  #       failure_action: rollback
+  #     restart_policy:
+  #       condition: on-failure
 
-  service-app4:
-    image: nexus.keanthaicloud.com:8888/big_city:4.4.4
-    ports:
-      - 6004:80
-    deploy:
-      mode: replicated
-      replicas: 1
-      update_config: 
-        parallelism: 1
-        order: start-first
-        failure_action: rollback
-      restart_policy:
-        condition: on-failure
+  # service-app4:
+  #   image: nexus.keanthaicloud.com:8888/big_city:4.4.4
+  #   ports:
+  #     - 6004:80
+  #   deploy:
+  #     mode: replicated
+  #     replicas: 1
+  #     update_config: 
+  #       parallelism: 1
+  #       order: start-first
+  #       failure_action: rollback
+  #     restart_policy:
+  #       condition: on-failure
